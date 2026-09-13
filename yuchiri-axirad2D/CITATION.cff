@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+title: "yuchiri-axirad2D — a general-purpose 2D axisymmetric conduction-radiation finite element solver / 범용 2차원 축대칭 전도-복사 유한요소 해석기"
+message: >-
+  If you use this software, please cite it as below.
+  이 소프트웨어를 사용하시면 아래와 같이 인용해 주십시오.
+type: software
+authors:
+  - family-names: "WON"
+    given-names: "Yoo Cheol"
+version: "2.0.0"
+date-released: "2026-08-28"
+license: MIT
+# Note: "MIT" here is the SPDX identifier of a standard permissive licence form.
+# It implies no connection with the Massachusetts Institute of Technology.
+# 주의: 여기서 "MIT" 는 표준 허가형 라이선스 양식의 SPDX 식별자이며,
+#       매사추세츠 공과대학교와 관련이 없다.
+abstract: >-
+  [EN] Computes coupled conduction-radiation temperature fields in axisymmetric
+  geometry from externally supplied mesh, materials and boundary conditions.
+  Surface radiation is solved by Monte Carlo ray tracing for Gebhart absorption
+  factors, fully coupled to conduction through a Newton solver. Supports five
+  element types (3/6-node triangles, 4/8/9-node quadrilaterals) mixed in one
+  mesh, and extracts radiating surfaces and enclosures automatically from
+  transparent/opaque material tags. Closure is never renormalised and
+  reciprocity is never symmetrised; failed checks abort with diagnostics rather
+  than being silently corrected. Serial and MPI results are bit-for-bit
+  identical.
+  [KO] 형상, 격자, 물성을 입력으로 받아 축대칭 전도-복사 결합 온도장을 계산한다.
+  표면 복사는 몬테카를로 광선 추적으로 Gebhart 흡수계수를 구하고 전도와 완전 결합
+  Newton 으로 푼다. 요소 5종을 혼합 지원하며, 복사면과 enclosure 를 재료의
+  투명/불투명 표시만으로 자동 추출한다. 폐쇄성 자동 보정과 상반성 대칭화를 하지
+  않고, 검사 실패 시 진단을 남기고 중단한다. 직렬과 MPI 결과가 비트 단위로 일치한다.
+keywords:
+  - finite element method
+  - axisymmetric
+  - radiation heat transfer
+  - Monte Carlo ray tracing
+  - Gebhart factors
+  - conjugate heat transfer
+  - verification and validation

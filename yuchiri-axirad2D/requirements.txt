@@ -1,0 +1,8 @@
+numpy>=1.24
+scipy>=1.10
+# 선택 — analysis.parallel = "mpi" 를 쓸 때만
+# mpi4py>=3.1
+
+# Python 3.9 / 3.10 에서만 필요. 3.11 부터는 표준 라이브러리 tomllib 을 쓴다.
+# Needed on Python 3.9 / 3.10 only; 3.11+ uses the standard library tomllib.
+# tomli>=2.0 ; python_version < "3.11" 

@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "mesh_file": "bm5.mesh.npz",
+  "mesh_hash": "c6efff924b4538efe84928b7fb357266",
+  "materials": [
+    "inner_solid",
+    "outer_solid",
+    "vacuum"
+  ],
+  "bcs": [
+    {
+      "type": "dirichlet",
+      "nset": "outer_wall",
+      "T": 300.0,
+      "name": "outer_wall"
+    }
+  ],
+  "node_count": 833,
+  "element_count": 192,
+  "element_types": {
+    "9": 192
+  },
+  "material_elements": {
+    "inner_solid": 48,
+    "outer_solid": 48,
+    "vacuum": 96
+  },
+  "G1_det_min": 6.90886500227689e-06,
+  "G1_bad": [],
+  "G2_worst_rel_diff": 0.0028527330417260446,
+  "G2_worst_elem": 133,
+  "G2_negative": [],
+  "G4_volume_element": 0.004155276073413233,
+  "G4_volume_boundary": 0.0041552760734132315,
+  "G4_rel_diff": 4.1747490306988624e-16,
+  "G4_tol": 2.7284841053187847e-12,
+  "duplicate_nodes": 0,
+  "enclosure_count": 1,
+  "segment_count": 48,
+  "zero_area_segments": 8,
+  "normal_mismatch": [],
+  "enclosure_area": [
+    0.10031572040209338
+  ],
+  "enclosure_segments": [
+    48
+  ],
+  "parallel_mode": "serial",
+  "mpi_size": 1,
+  "seed": 21,
+  "n_bounce_max": 20,
+  "leak_tol": 1e-05,
+  "n_ray": 40000,
+  "leak_open": 0.0,
+  "leak_bounce": 0.0,
+  "closure_min": 0.9999999999999999,
+  "closure_max": 1.0,
+  "reciprocity_max_rel": 0.5410938888080612,
+  "reciprocity_max_abs": 0.06545616098457181,
+  "reciprocity_l1": 0.032060707179522654,
+  "negative_B": 0,
+  "time_radiation_s": 27.229570150375366,
+  "iterations": [
+    {
+      "iter": 1,
+      "step": 14.46295976156868,
+      "energy_imbalance": 0.999733001488925,
+      "Tmin": 300.0,
+      "Tmax": 400.0
+    },
+    {
+      "iter": 2,
+      "step": 0.2880416407114922,
+      "energy_imbalance": 5.126144212705399e-12,
+      "Tmin": 299.9999999999779,
+      "Tmax": 1846.295976156868
+    },
+    {
+      "iter": 3,
+      "step": 0.28462614541157394,
+      "energy_imbalance": 2.5962307977692516e-12,
+      "Tmin": 299.9999999999998,
+      "Tmax": 1400.8985177883792
+    },
+    {
+      "iter": 4,
+      "step": 0.24528998398867188,
+      "energy_imbalance": 9.907816991340983e-13,
+      "Tmin": 299.9999999999999,
+      "Tmax": 1087.5551311839283
+    },
+    {
+      "iter": 5,
+      "step": 0.13817777426528366,
+      "energy_imbalance": 4.653822338469568e-13,
+      "Tmin": 300.0,
+      "Tmax": 894.3761822747556
+    },
+    {
+      "iter": 6,
+      "step": 0.027739425563853396,
+      "energy_imbalance": 6.410818499208124e-13,
+      "Tmin": 300.0,
+      "Tmax": 812.2467222717404
+    },
+    {
+      "iter": 7,
+      "step": 0.0007807101672859129,
+      "energy_imbalance": 1.3028927854582814e-13,
+      "Tmin": 300.0,
+      "Tmax": 798.037307533248
+    },
+    {
+      "iter": 8,
+      "step": 5.720182832719082e-07,
+      "energy_imbalance": 1.5104787190362783e-14,
+      "Tmin": 300.0,
+      "Tmax": 797.648485105152
+    },
+    {
+      "iter": 9,
+      "step": 3.0700663780961647e-13,
+      "energy_imbalance": 3.716402294788967e-14,
+      "Tmin": 300.0,
+      "Tmax": 797.6482004413785
+    }
+  ],
+  "converged": true,
+  "power": {
+    "source": 299.99972494741814,
+    "radiation_net": 1.4210854715202004e-14,
+    "metabolic": 0.0,
+    "perfusion_net": 0.0
+  },
+  "reaction_dirichlet": -299.9997249474352,
+  "power_in_total": 299.99972494741814,
+  "energy_scale_W": 299.9997249474352,
+  "energy_residual_rel": 5.684347097728296e-14,
+  "nset_faces": {},
+  "material_range_violation": {},
+  "P3_curved_area_total": 0.1005309034933306,
+  "P3_straight_area_total": 0.10031572040209338,
+  "P3_area_rel_diff_total": 0.0021404670977765113,
+  "P3_area_rel_diff_max": 0.0021404670977770526,
+  "P3_worst_segment": 36,
+  "time_total_s": 27.806170225143433
+}

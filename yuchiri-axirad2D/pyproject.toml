@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yuchiri-axirad2D"
+version = "2.0.0"
+description = "A general-purpose 2D axisymmetric conduction-radiation FEM solver / 범용 2차원 축대칭 전도-복사 유한요소 해석기"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+dependencies = ["numpy>=1.24", "scipy>=1.10"]
+keywords = ["finite-element", "axisymmetric", "radiation", "heat-transfer",
+            "monte-carlo", "gebhart"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+
+[project.optional-dependencies]
+mpi = ["mpi4py>=3.1"]
+test = ["pytest>=7"]
+
+[project.scripts]
+yuchiri-axirad2D = "axirad2d.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

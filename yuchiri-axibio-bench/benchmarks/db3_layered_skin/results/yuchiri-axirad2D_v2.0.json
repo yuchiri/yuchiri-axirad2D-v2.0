@@ -1,0 +1,163 @@
+{
+  "suite_version": "0.2.0",
+  "benchmark_id": "DB-3",
+  "code_name": "yuchiri-axirad2D",
+  "code_version": "2.0.0",
+  "element_type": "9-node quadrilateral (Lagrange)",
+  "norm": "nodal L-infinity (error_L2 also reported)",
+  "mesh_source": "suite-provided meshes (db3_r1/r2/r4)",
+  "axial_boundary_conditions": "core: Dirichlet; surface: convection + env_radiation; lateral: adiabatic (natural)",
+  "cases": [
+    {
+      "case": "nominal",
+      "perfusion_scale": 1.0,
+      "dimensionless_groups": {
+        "kappa_L_subcutaneous": 3.5071788662684433,
+        "kappa_L_dermis": 0.7687688718843775,
+        "kappa_L_epidermis": 0.0
+      },
+      "T_surface_exact_K": 309.4516430060794,
+      "meshes": [
+        {
+          "refine": 1,
+          "n_nodes": 245,
+          "n_elements": 51,
+          "characteristic_h_m": 0.0001,
+          "error_Linf_nodal_K": 1.5617463304806734e-06,
+          "error_L2_nodal_K": 6.460992342511581e-07,
+          "radial_variation_K": 1.7053025658242404e-13,
+          "energy_residual_relative": 1.0624823387707573e-11,
+          "newton_iterations": 3,
+          "T_surface_computed_K": 309.4516440061729
+        },
+        {
+          "refine": 2,
+          "n_nodes": 897,
+          "n_elements": 204,
+          "characteristic_h_m": 5e-05,
+          "error_Linf_nodal_K": 1.1114531162093044e-07,
+          "error_L2_nodal_K": 4.041726249660893e-08,
+          "radial_variation_K": 1.7053025658242404e-13,
+          "energy_residual_relative": 9.890985465475717e-13,
+          "newton_iterations": 4,
+          "T_surface_computed_K": 309.45164306891706,
+          "observed_order": 3.8126411417322417
+        },
+        {
+          "refine": 4,
+          "n_nodes": 3425,
+          "n_elements": 816,
+          "characteristic_h_m": 2.5e-05,
+          "error_Linf_nodal_K": 7.421647296723677e-09,
+          "error_L2_nodal_K": 2.525573210935783e-09,
+          "radial_variation_K": 2.8421709430404007e-13,
+          "energy_residual_relative": 1.944470348660103e-11,
+          "newton_iterations": 4,
+          "T_surface_computed_K": 309.451643010012,
+          "observed_order": 3.9045638424178493
+        }
+      ]
+    },
+    {
+      "case": "weak",
+      "perfusion_scale": 0.1,
+      "dimensionless_groups": {
+        "kappa_L_subcutaneous": 1.1090673379015363,
+        "kappa_L_dermis": 0.24310606293928141,
+        "kappa_L_epidermis": 0.0
+      },
+      "T_surface_exact_K": 308.2368988413859,
+      "meshes": [
+        {
+          "refine": 1,
+          "n_nodes": 245,
+          "n_elements": 51,
+          "characteristic_h_m": 0.0001,
+          "error_Linf_nodal_K": 1.2483633327065036e-07,
+          "error_L2_nodal_K": 6.278175368109705e-08,
+          "radial_variation_K": 1.7053025658242404e-13,
+          "energy_residual_relative": 8.867498831536194e-14,
+          "newton_iterations": 4,
+          "T_surface_computed_K": 308.2368989187102
+        },
+        {
+          "refine": 2,
+          "n_nodes": 897,
+          "n_elements": 204,
+          "characteristic_h_m": 5e-05,
+          "error_Linf_nodal_K": 8.095184966805391e-09,
+          "error_L2_nodal_K": 3.930869557840955e-09,
+          "radial_variation_K": 2.8421709430404007e-13,
+          "energy_residual_relative": 8.212606112420442e-13,
+          "newton_iterations": 4,
+          "T_surface_computed_K": 308.23689884622036,
+          "observed_order": 3.9468300324755416
+        },
+        {
+          "refine": 4,
+          "n_nodes": 3425,
+          "n_elements": 816,
+          "characteristic_h_m": 2.5e-05,
+          "error_Linf_nodal_K": 5.154561222298071e-10,
+          "error_L2_nodal_K": 2.458749943200356e-10,
+          "radial_variation_K": 2.2737367544323206e-13,
+          "energy_residual_relative": 8.521748329192459e-13,
+          "newton_iterations": 4,
+          "T_surface_computed_K": 308.23689884168795,
+          "observed_order": 3.9731425153028583
+        }
+      ]
+    },
+    {
+      "case": "strong",
+      "perfusion_scale": 10.0,
+      "dimensionless_groups": {
+        "kappa_L_subcutaneous": 11.090673379015362,
+        "kappa_L_dermis": 2.431060629392814,
+        "kappa_L_epidermis": 0.0
+      },
+      "T_surface_exact_K": 309.8909503064846,
+      "meshes": [
+        {
+          "refine": 1,
+          "n_nodes": 245,
+          "n_elements": 51,
+          "characteristic_h_m": 0.0001,
+          "error_Linf_nodal_K": 2.0050090654422092e-05,
+          "error_L2_nodal_K": 6.372722204285961e-06,
+          "radial_variation_K": 1.1368683772161603e-13,
+          "energy_residual_relative": 1.1900077343144628e-11,
+          "newton_iterations": 3,
+          "T_surface_computed_K": 309.89096765751765
+        },
+        {
+          "refine": 2,
+          "n_nodes": 897,
+          "n_elements": 204,
+          "characteristic_h_m": 5e-05,
+          "error_Linf_nodal_K": 1.5710858178863418e-06,
+          "error_L2_nodal_K": 3.967683026828641e-07,
+          "radial_variation_K": 2.2737367544323206e-13,
+          "energy_residual_relative": 2.539037875442556e-10,
+          "newton_iterations": 3,
+          "T_surface_computed_K": 309.89095142299766,
+          "observed_order": 3.673774867036157
+        },
+        {
+          "refine": 4,
+          "n_nodes": 3425,
+          "n_elements": 816,
+          "characteristic_h_m": 2.5e-05,
+          "error_Linf_nodal_K": 1.1022558510376257e-07,
+          "error_L2_nodal_K": 2.4623809655612843e-08,
+          "radial_variation_K": 2.8421709430404007e-13,
+          "energy_residual_relative": 1.1277671437343361e-10,
+          "newton_iterations": 3,
+          "T_surface_computed_K": 309.89095037678516,
+          "observed_order": 3.8332309472864727
+        }
+      ]
+    }
+  ],
+  "notes": "Observed order is consistent with 4 (nodal superconvergence for quadratic elements in 1D), not with 3; see SPEC section 4. The P3 shape-bias diagnostic is ~1e-16 on these meshes because every element edge is straight."
+}

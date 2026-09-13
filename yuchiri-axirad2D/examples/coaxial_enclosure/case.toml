@@ -1,0 +1,59 @@
+# =====================================================================
+# BM — 동축 원통 밀폐공동 (볼록 내부물체 완전 포위)
+# yuchiri-axirad2D 사양서 v1.0
+#
+# 검증하는 것
+#   * F(1->2) = 1, F(1->1) = 0            내부물체가 볼록하고 완전히 포위됨
+#   * sum_b B_ab = 1                       닫힌 형상
+#   * 에너지 수지: 발열 200 W = 외벽 유출
+#   * 고전도 극한에서 2면 밀폐공간 해석해와 일치
+# =====================================================================
+schema_version = "1.0"
+mesh_file      = "coaxial_enclosure.mesh.npz"
+mesh_hash      = "37fdbddfdf7f5d7db708af42c9bcb2bb"
+length_unit    = 1.0
+
+[analysis]
+mode     = "steady"
+parallel = "serial"          # "serial" | "mpi"
+
+# --- 재료 (§6) --------------------------------------------------------
+# k(T) = sum c_p T^p + sum d_n / T^n     [W/(m K)]
+[material.inner_solid]
+opaque     = true
+emissivity = 0.8
+k_pos      = [5000.0]        # 고전도 -> 거의 등온 (해석해 대조용)
+T_range    = [200.0, 2000.0]
+
+[material.shell_solid]
+opaque     = true
+emissivity = 1.0
+k_pos      = [5000.0]
+T_range    = [200.0, 2000.0]
+
+[material.cavity_vacuum]
+opaque     = false           # 복사에 투명. 전도는 무시할 수준으로 작게 둔다
+k_pos      = [1.0e-5]
+
+# --- 경계조건 (§8) ----------------------------------------------------
+[bc.outer_wall]
+type = "dirichlet"
+nset = "outer_wall"
+T    = 300.0
+
+# --- 복사 (§10) -------------------------------------------------------
+[radiation]
+n_ray        = 40000
+seed         = 12345
+n_bounce_max = 20
+leak_tol     = 1.0e-5
+
+[solver]
+T_init    = 400.0
+eps_T     = 1.0e-9
+eps_E     = 1.0e-9
+max_iter  = 40
+quad_bump = 0
+
+[output]
+detail = false

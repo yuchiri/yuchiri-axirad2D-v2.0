@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "mesh_file": "coaxial_enclosure.mesh.npz",
+  "mesh_hash": "37fdbddfdf7f5d7db708af42c9bcb2bb",
+  "materials": [
+    "cavity_vacuum",
+    "inner_solid",
+    "shell_solid"
+  ],
+  "bcs": [
+    {
+      "type": "dirichlet",
+      "nset": "outer_wall",
+      "T": 300.0,
+      "name": "outer_wall"
+    }
+  ],
+  "node_count": 1025,
+  "element_count": 240,
+  "element_types": {
+    "9": 240
+  },
+  "material_elements": {
+    "cavity_vacuum": 110,
+    "inner_solid": 50,
+    "shell_solid": 80
+  },
+  "G1_det_min": 2.499999999999963e-05,
+  "G1_bad": [],
+  "G2_worst_rel_diff": 3.184843881676078e-14,
+  "G2_worst_elem": 203,
+  "G2_negative": [],
+  "G4_volume_element": 0.009047786842338602,
+  "G4_volume_boundary": 0.0090477868423386,
+  "G4_rel_diff": 1.91729038957822e-16,
+  "G4_tol": 3.410605131648481e-12,
+  "duplicate_nodes": 0,
+  "enclosure_count": 1,
+  "segment_count": 56,
+  "zero_area_segments": 6,
+  "normal_mismatch": [],
+  "enclosure_area": [
+    0.21048670779051612
+  ],
+  "enclosure_segments": [
+    56
+  ],
+  "parallel_mode": "serial",
+  "mpi_size": 1,
+  "seed": 12345,
+  "n_bounce_max": 20,
+  "leak_tol": 1e-05,
+  "n_ray": 40000,
+  "leak_open": 0.0,
+  "leak_bounce": 0.0,
+  "closure_min": 0.9999999999999999,
+  "closure_max": 1.0,
+  "reciprocity_max_rel": 0.7738095238095236,
+  "reciprocity_max_abs": 0.010684420509146577,
+  "reciprocity_l1": 0.030124421874999974,
+  "negative_B": 0,
+  "time_radiation_s": 20.753087520599365,
+  "iterations": [
+    {
+      "iter": 1,
+      "step": 2.654948052552221,
+      "energy_imbalance": 0.9999926293459172,
+      "Tmin": 300.0,
+      "Tmax": 400.0
+    },
+    {
+      "iter": 2,
+      "step": 0.21919873074866109,
+      "energy_imbalance": 5.226752364248567e-13,
+      "Tmin": 299.99999999934454,
+      "Tmax": 665.4948052552221
+    },
+    {
+      "iter": 3,
+      "step": 0.06869359911999377,
+      "energy_imbalance": 2.2211676942113866e-12,
+      "Tmin": 300.0,
+      "Tmax": 585.3788588744305
+    },
+    {
+      "iter": 4,
+      "step": 0.004013238345894589,
+      "energy_imbalance": 9.477377493904982e-12,
+      "Tmin": 300.0,
+      "Tmax": 565.7751580564579
+    },
+    {
+      "iter": 5,
+      "step": 1.1445427782693393e-05,
+      "energy_imbalance": 5.1162581709749375e-12,
+      "Tmin": 300.0,
+      "Tmax": 564.7085390052213
+    },
+    {
+      "iter": 6,
+      "step": 9.211575846360189e-11,
+      "energy_imbalance": 4.056034299238344e-12,
+      "Tmin": 300.0,
+      "Tmax": 564.7055093027665
+    }
+  ],
+  "converged": true,
+  "power": {
+    "source": 200.0,
+    "radiation_net": 2.1316282072803006e-14,
+    "metabolic": 0.0,
+    "perfusion_net": 0.0
+  },
+  "reaction_dirichlet": -200.00000000022268,
+  "power_in_total": 200.0,
+  "energy_scale_W": 200.00000000022268,
+  "energy_residual_rel": 1.1134204669348374e-12,
+  "nset_faces": {},
+  "material_range_violation": {},
+  "P3_curved_area_total": 0.21048670779051615,
+  "P3_straight_area_total": 0.21048670779051612,
+  "P3_area_rel_diff_total": 1.318637927638274e-16,
+  "P3_area_rel_diff_max": 2.898943069042274e-15,
+  "P3_worst_segment": 54,
+  "time_total_s": 21.29871654510498
+}

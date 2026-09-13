@@ -1,0 +1,16 @@
+﻿benchmark,quantity_EN,항목_KO,computed,exact,unit,error_%,basis_of_exact_solution_EN,정확해의_근거_KO
+BM-1,"T1, inner body surface temperature",T1 (내부물체 표면온도),564.6711,564.6606,K,+0.0019,convex body fully enclosed + black cavity wall,볼록체 완전 포위 + 흑체 공동벽
+BM-1,"Q, net radiative exchange",Q (복사 순교환),200.0162,200.0000,W,+0.0081,Q = e1*A1*sigma*(T1^4-T2^4),Q = e1 A1 sigma (T1^4-T2^4)
+BM-1,F(1->1),F(1->1),0.0,0,-,+0.0e+00,a convex body cannot see itself,볼록체는 자기 자신을 보지 못함
+BM-1,F(1->2),F(1->2),1.000000000000,1,-,+0.0000,fully enclosed,완전 포위
+BM-1,"A1, sum of segment areas",A1 (세그먼트 합),0.0471238898,0.0471238898,m^2,+0.0000,2*pi*a*h + 2*pi*a^2,2*pi*a*h + 2*pi*a^2
+BM-2,F(disk1->disk2),F(원판1->원판2),0.171501917,0.171572875,-,-0.0414,"coaxial parallel disks, closed form",동축 평행 원판 닫힌 형태
+BM-2,F(side wall->disk1),F(측벽->원판1),0.207167083,0.207106781,-,+0.0291,derived by reciprocity,상반성으로 유도
+BM-2,F(disk1->disk1),F(원판1->원판1),0.0,0,-,+0.0e+00,planar surface,평면
+BM-2,A_disk,A_원판,0.007853981634,0.007853981634,m^2,+0.0000,pi*R^2,pi R^2
+BM-2,A_side wall,A_측벽,0.031415926536,0.031415926536,m^2,+0.0000,2*pi*R*L,2 pi R L
+BM-5,A1 (n_theta = 48),A1 (nth=48),0.020095428,0.020106193,m^2,-0.0535,4*pi*a^2 (frustum approximation),4 pi a^2 (원뿔대 근사)
+BM-5,"F(1->1), black",F(1->1) 흑체,0.0,0,-,+0.0e+00,convex polyhedron,볼록 다면체
+BM-5,"F(1->2), black",F(1->2) 흑체,1.000000000000,1,-,+0.0000,fully enclosed,완전 포위
+BM-5,"Q, gray isothermal (computed areas)",Q 회색 등온 (계산면적 기준),752.0272,752.2936,W,-0.0354,geometry where the lumped 2-surface formula is exact,2면 집중식이 정확한 형상
+BM-5,"Q, coupled solve",Q 결합해석,300.0959,300.0000,W,+0.0320,compared against the heat input,투입 발열과 대조

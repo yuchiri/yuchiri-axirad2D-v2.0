@@ -1,0 +1,8 @@
+# Standalone parts of this suite need only NumPy.
+# 이 모음의 독립 실행 부분은 NumPy 만 있으면 된다.
+numpy>=1.24
+
+# Only for redrawing the figures. Not needed to reproduce the reference values
+# or to check a report.
+# 도면을 다시 그릴 때만 필요하다. 참조값 재현이나 보고서 검사에는 필요 없다.
+# matplotlib>=3.7

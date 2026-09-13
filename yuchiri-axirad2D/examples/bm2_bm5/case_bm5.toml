@@ -1,0 +1,38 @@
+# BM-5  동심 구 — 회색벽 2면 집중식이 정확한 형상
+schema_version = "1.0"
+mesh_file  = "bm5.mesh.npz"
+mesh_hash  = "c6efff924b4538efe84928b7fb357266"
+
+[analysis]
+mode = "steady"
+parallel = "serial"
+
+[material.inner_solid]
+opaque = true
+emissivity = 0.8
+k_pos = [400.0]
+
+[material.outer_solid]
+opaque = true
+emissivity = 0.5
+k_pos = [400.0]
+
+[material.vacuum]
+opaque = false
+k_pos = [1.0e-5]
+
+[bc.outer_wall]
+type = "dirichlet"
+nset = "outer_wall"
+T = 300.0
+
+[radiation]
+n_ray = 40000
+seed = 21
+leak_tol = 1.0e-5
+
+[solver]
+T_init = 400.0
+eps_T = 1.0e-9
+eps_E = 1.0e-9
+max_iter = 40

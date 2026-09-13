@@ -1,0 +1,33 @@
+# BM-2  유한 원통 밀폐공동 — 전 면 흑체 -> B = F, 형상계수 정확해 대조
+schema_version = "1.0"
+mesh_file  = "bm2.mesh.npz"
+mesh_hash  = "62794bf99bcc20a1cfe43cb6bb9f876a"
+
+[analysis]
+mode = "steady"
+parallel = "serial"
+
+[material.shell]
+opaque = true
+emissivity = 1.0          # 흑체 -> B = F
+k_pos = [30.0]
+
+[material.vacuum]
+opaque = false
+k_pos = [1.0e-5]
+
+[bc.outer_wall]
+type = "dirichlet"
+nset = "outer_wall"
+T = 300.0
+
+[radiation]
+n_ray = 60000
+seed = 101
+leak_tol = 1.0e-5
+
+[solver]
+T_init = 350.0
+eps_T = 1.0e-9
+eps_E = 1.0e-9
+max_iter = 40
